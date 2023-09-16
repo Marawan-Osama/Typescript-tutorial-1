@@ -51,7 +51,49 @@ greetMe(me)
 // }
 
 // 2nd variation: (with Type Assertion)
-const year = document.getElementById("year") as HTMLSpanElement
-const thisYear: string = new Date().getFullYear().toString()
-year.setAttribute("datetime", thisYear)
-year.textContent = thisYear
+// const year = document.getElementById("year") as HTMLElement
+// const thisYear: string = new Date().getFullYear().toString()
+// year.setAttribute("datetime", thisYear)
+// year.textContent = thisYear
+
+interface Student {
+    [index:string]: string | number | number[] | undefined;
+    name: string;
+    age: number;
+    GPA: number;
+    classes?: number[];
+}
+
+const student: Student = {
+    name: "Maro",
+    age: 16,
+    GPA: 4.0,
+    koko:5,
+    classes: [1,2,3,4,5]
+}
+
+const logStudent = (student:Student, key: keyof typeof student)=>{
+    return console.log(`Student ${key} : ${student[key]}`)
+}
+
+const logkeys = ()=>{
+    Object.keys(student).map(key=>{
+        console.log(student[key])
+    })
+}
+
+
+logStudent(student, "koko")
+logkeys()
+
+type Incomes = Record<'salary' | 'bonus' | 'sidehustle', string| number>
+
+const incomes: Incomes = {
+    salary: 100000,
+    bonus: 20000,
+    sidehustle: "1000"
+}
+
+for( const revenue in incomes){
+    console.log(incomes[revenue as keyof Incomes])
+}
