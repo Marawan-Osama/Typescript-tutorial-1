@@ -76,6 +76,7 @@ const logStudent = (student:Student, key: keyof typeof student)=>{
     return console.log(`Student ${key} : ${student[key]}`)
 }
 
+//this just logs the keys of the object
 const logkeys = ()=>{
     Object.keys(student).map(key=>{
         console.log(student[key])
