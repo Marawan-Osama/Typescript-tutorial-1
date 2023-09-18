@@ -100,3 +100,17 @@ for( const revenue in incomes){
 }
 
 const age = 6
+
+
+let value:
+    |Date
+    |null
+    |undefined
+    |string
+
+if(typeof value === "string"){
+    console.log(`value is a ${typeof value}`)
+}
+if(value instanceof Date){
+    console.log(`value is a ${typeof value}`)
+}
