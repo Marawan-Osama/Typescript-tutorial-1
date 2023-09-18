@@ -83,7 +83,7 @@ const logkeys = ()=>{
     })
 }
 
-
+//logs students
 logStudent(student, "koko")
 logkeys()
 
@@ -98,3 +98,5 @@ const incomes: Incomes = {
 for( const revenue in incomes){
     console.log(incomes[revenue as keyof Incomes])
 }
+
+const age = 6
