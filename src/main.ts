@@ -87,6 +87,7 @@ const logkeys = ()=>{
 logStudent(student, "koko")
 logkeys()
 
+//record's purpose is to map strings to any type
 type Incomes = Record<'salary' | 'bonus' | 'sidehustle', string| number>
 
 const incomes: Incomes = {
