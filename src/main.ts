@@ -115,3 +115,5 @@ if(typeof value === "string"){
 if(value instanceof Date){
     console.log(`value is a ${typeof value}`)
 }
+
+//next up will be using prisma to create a postgresql database
